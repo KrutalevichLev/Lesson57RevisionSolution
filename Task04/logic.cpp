@@ -51,9 +51,7 @@ int find_max_number(int matrix[DEFAUL_SIZE][DEFAUL_SIZE], int n, int m) {
 	return max;
 }
 
-bool column_have_extreme_value(int matrix[DEFAUL_SIZE][DEFAUL_SIZE], int n, int m, int column_index) {
-	int min = find_min_number(matrix, n, m);
-	int max = find_max_number(matrix, n, m);
+bool column_have_extreme_value(int matrix[DEFAUL_SIZE][DEFAUL_SIZE], int n, int m, int max, int min, int column_index) {
 
 	for (int i = 0; i < n; i++)
 	{
@@ -72,10 +70,12 @@ int sum_elements_of_columns_with_extreme_value(int matrix[DEFAUL_SIZE][DEFAUL_SI
 	}
 
 	int sum = 0;
+	int min = find_min_number(matrix, n, m);
+	int max = find_max_number(matrix, n, m);
 	
 	for (int i = 0; i < m; i++)
 	{
-		if (column_have_extreme_value(matrix, n, m, i)) {
+		if (column_have_extreme_value(matrix, n, m, max, min, i)) {
 			sum += sum_column(matrix, n, i);
 		}
 	}
