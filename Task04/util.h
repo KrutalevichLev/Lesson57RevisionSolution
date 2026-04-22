@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include "logic.h"
+
 using namespace std;
 
 string convert(int matrix[DEFAUL_SIZE][DEFAUL_SIZE], int n, int m);
