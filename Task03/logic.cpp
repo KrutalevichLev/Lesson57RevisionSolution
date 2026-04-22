@@ -8,7 +8,6 @@
 #include "util.h"
 
 int count_rows_with_more_positive_values(int matrix[DEFAULT_SIZE][DEFAULT_SIZE], int n, int m) {
-
 	if (n <= 0 || m <= 0) {
 		return -1;
 	}
